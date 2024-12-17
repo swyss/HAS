@@ -43,3 +43,55 @@ Refer to the individual component README files for setup instructions:
 - [DataTrendz - Visualization and Analysis](./components/visualization/README.md)
 - [SmartControl- Mobile Application](./components/mobile/README.md)
 - [EdgeLink - Gateway](./components/gateway/README.md)
+
+## Structure
+
+HAS/
+├── components/           # Contains all main components/applications
+│   ├── backend/          # Core Backend (EchoStream)
+│   │   ├── src/          # Source code
+│   │   ├── config/       # Configuration files
+│   │   ├── test/         # Unit and integration tests
+│   │   └── README.md     # Documentation for EchoStream
+│   ├── admin/            # Admin Console (AdminTool)
+│   │   ├── src/          # Vue.js code
+│   │   ├── public/       # Static assets
+│   │   ├── test/         # Unit tests
+│   │   └── README.md     # Documentation for AdminTool
+│   ├── visualization/    # Visualization and Analysis (DataTrendz)
+│   │   ├── src/          # Vue.js code
+│   │   ├── public/       # Static assets
+│   │   ├── test/         # Unit tests
+│   │   └── README.md     # Documentation for DataTrendz
+│   ├── mobile/           # Mobile App (SmartControl)
+│   │   ├── src/          # MAUI code
+│   │   ├── resources/    # Assets
+│   │   ├── test/         # Unit tests
+│   │   └── README.md     # Documentation for SmartControl
+│   ├── gateway/          # Gateway (EdgeLink)
+│   │   ├── src/          # Python code
+│   │   ├── config/       # Protocol configurations
+│   │   ├── logs/         # Gateway logs
+│   │   ├── test/         # Unit tests
+│   │   └── README.md     # Documentation for EdgeLink
+│
+├── docs/                 # Centralized project documentation
+│   ├── architecture.md   # High-level architecture documentation
+│   ├── protocols.md      # Protocol integration details
+│   ├── database.md       # Database schema and usage
+│   ├── setup.md          # Setup and installation guide
+│   └── overview.md       # Project overview and goals
+│
+├── docker/               # Docker configurations
+│   ├── docker-compose.yml
+│   ├── backend/          # Backend Docker setup
+│   ├── admin/            # Admin Console Docker setup
+│   ├── gateway/          # Gateway Docker setup
+│   ├── database/         # Database Docker setup
+│
+├── scripts/              # Utility scripts
+│   ├── setup.sh
+│   ├── deploy.sh
+│   └── test.sh
+│
+└── README.md             # Main project documentation
