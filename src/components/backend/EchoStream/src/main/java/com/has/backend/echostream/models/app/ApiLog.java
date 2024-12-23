@@ -1,4 +1,4 @@
-package com.has.backend.echostream.models;
+package com.has.backend.echostream.models.app;
 
 import jakarta.persistence.*;
 

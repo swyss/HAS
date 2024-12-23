@@ -10,42 +10,51 @@ The HAS system integrates various smart home protocols to enable communication w
 ### **1. ZigBee**
 - **Purpose:** Wireless communication for smart devices (sensors, actuators).
 - **Integration:** ZigBee2MQTT.
-- **Use Cases:**  
-  - Smart lighting (e.g., Philips Hue).  
+- **Use Cases:**
+  - Smart lighting (e.g., Philips Hue).
   - Motion sensors and temperature monitoring.
 
 ### **2. Z-Wave**
 - **Purpose:** Energy-efficient mesh network for smart devices.
 - **Integration:** OpenZWave.
-- **Use Cases:**  
+- **Use Cases:**
   - Smart locks, thermostats, and switches.
 
 ### **3. MQTT**
 - **Purpose:** Lightweight messaging protocol for real-time communication.
 - **Integration:** paho-mqtt library in Python (EdgeLink).
-- **Use Cases:**  
-  - Gateway-to-Backend data transfer.  
+- **Use Cases:**
+  - Gateway-to-Backend data transfer.
   - Real-time sensor updates.
 
 ### **4. Philips Hue API**
 - **Purpose:** REST API for Philips Hue smart lighting systems.
 - **Integration:** Local bridge API.
-- **Use Cases:**  
+- **Use Cases:**
   - Light control and scene management.
 
 ### **5. Google Home API**
 - **Purpose:** Integration with Google Smart Home SDK.
 - **Integration:** Actions on Google.
-- **Use Cases:**  
+- **Use Cases:**
   - Voice control and synchronization of smart devices.
 
 ### **6. REST APIs**
 - **Purpose:** Standard communication for custom sensors and actuators.
-- **Use Cases:**  
+- **Use Cases:**
   - Integration of proprietary or custom-built devices.
+  - Dynamic status updates using SystemMessage models.
 
 ---
 
 ## Future Protocols
 - **KNX:** Wired communication for building automation.
 - **BACnet:** HVAC system management.
+- **Custom Protocols:** Integration with proprietary systems using REST APIs.
+
+---
+
+## Enhanced Use Cases
+The addition of **SensGuard** introduces advanced monitoring capabilities for:
+- Detecting sensor anomalies.
+- Monitoring system health and error diagnostics.

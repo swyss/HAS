@@ -12,7 +12,7 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update   # Use 'validate' or 'none' in production
-    show-sql: true
+    show-sql: false # LOG
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 # Redis Configuration
@@ -27,8 +27,8 @@ influx:
   bucket: has-backend_bucket
   org: has-backend_org
 
-#log
-logging:
-  level:
-    root: INFO
-    com.has.backend.interceptor: DEBUG
+# APP
+app_settings:
+  api:
+    log:
+      detail: false

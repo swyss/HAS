@@ -1,7 +1,7 @@
-package com.has.backend.echostream.services;
+package com.has.backend.echostream.services.app;
 
-import com.has.backend.echostream.models.SystemLog;
-import com.has.backend.echostream.repos.SystemLogRepository;
+import com.has.backend.echostream.models.app.SystemLog;
+import com.has.backend.echostream.repos.app.SystemLogRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

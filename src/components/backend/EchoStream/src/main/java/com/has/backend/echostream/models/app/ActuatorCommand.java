@@ -1,5 +1,6 @@
-package com.has.backend.echostream.models;
+package com.has.backend.echostream.models.app;
 
+import com.has.backend.echostream.models.Device;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

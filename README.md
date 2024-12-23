@@ -1,5 +1,4 @@
-# Home Automation System (HAS)
-
+# HAS
 ## Overview
 The **Home Automation System (HAS)** is a modular and scalable platform for managing smart home devices and systems. It integrates multiple components to enable centralized control, real-time data processing, and analytics.
 
@@ -11,6 +10,7 @@ The **Home Automation System (HAS)** is a modular and scalable platform for mana
 3. **Visualization and Analysis (DataTrendz):** Offers dashboards and analytics for real-time and historical data.
 4. **Mobile Application (SmartControl):** A cross-platform app for controlling and monitoring devices.
 5. **Gateway (EdgeLink):** Local data collection and protocol integration for devices.
+6. **Sensor Monitoring (SensGuard):** Detects anomalies in sensor behavior and provides health insights.
 
 ---
 
@@ -31,6 +31,7 @@ The **Home Automation System (HAS)** is a modular and scalable platform for mana
 | **Visualization**    | DataTrendz             | Vue.js + Quasar Framework    | Dashboards and analytics             |
 | **Mobile**           | SmartControl           | MAUI (C#)                    | Cross-platform mobile app            |
 | **Gateway**          | EdgeLink               | Python                       | Local protocol integration           |
+| **Monitoring**       | SensGuard              | Python + Machine Learning    | Sensor health and anomaly detection  |
 | **Databases**        | -                      | PostgreSQL, InfluxDB, Redis  | Relational, time-series, and caching |
 | **Monitoring**       | -                      | Grafana + Prometheus         | System performance and analytics     |
 
@@ -43,6 +44,7 @@ Refer to the individual component README files for setup instructions:
 - [DataTrendz - Visualization and Analysis](./components/visualization/README.md)
 - [SmartControl- Mobile Application](./components/mobile/README.md)
 - [EdgeLink - Gateway](./components/gateway/README.md)
+- [SensGuard - Sensor Monitoring](./components/sensguard/README.md)
 
 ## Structure
 
@@ -74,6 +76,12 @@ HAS/
 │   │   ├── logs/         # Gateway logs
 │   │   ├── test/         # Unit tests
 │   │   └── README.md     # Documentation for EdgeLink
+│   ├── sensguard/        # Sensor Monitoring (SensGuard)
+│   │   ├── src/          # Python code
+│   │   ├── config/       # Monitoring configurations
+│   │   ├── logs/         # Sensor logs
+│   │   ├── test/         # Unit tests
+│   │   └── README.md     # Documentation for SensGuard
 │
 ├── docs/                 # Centralized project documentation
 │   ├── architecture.md   # High-level architecture documentation

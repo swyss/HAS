@@ -2,12 +2,10 @@ package com.has.backend.echostream.models;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Data
 public class SensorData {
 
     @Id
@@ -23,5 +21,45 @@ public class SensorData {
 
     @Column(nullable = false)
     private LocalDateTime timestamp; // Time of data capture
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Device getDevice() {
+        return device;
+    }
+
+    public void setDevice(Device device) {
+        this.device = device;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Double getValue() {
+        return value;
+    }
+
+    public void setValue(Double value) {
+        this.value = value;
+    }
+
+    public LocalDateTime getTimestamp() {
+        return timestamp;
+    }
+
+    public void setTimestamp(LocalDateTime timestamp) {
+        this.timestamp = timestamp;
+    }
 }
 

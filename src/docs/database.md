@@ -1,5 +1,4 @@
 # Database Documentation
-
 ## Overview
 The HAS system uses multiple databases to manage relational data, time-series data, and caching for optimal performance.
 
@@ -18,39 +17,42 @@ The HAS system uses multiple databases to manage relational data, time-series da
 ## PostgreSQL Schema
 ### **Tables**
 1. **Users**
-   - `id`: Primary key  
-   - `username`: Unique name  
-   - `role`: Role of the user  
-   - `created_at`: Timestamp  
+   - `id`: Primary key
+   - `username`: Unique name
+   - `role`: Role of the user
+   - `created_at`: Timestamp
 
 2. **Devices**
-   - `device_id`: Primary key  
-   - `type`: Device type (sensor, actuator)  
-   - `status`: Current status  
-   - `location`: Device location  
+   - `device_id`: Primary key
+   - `type`: Device type (sensor, actuator)
+   - `status`: Current status
+   - `location`: Device location
 
 3. **Configuration**
-   - `config_id`: Primary key  
-   - `key`: Configuration key  
-   - `value`: Configuration value  
+   - `config_id`: Primary key
+   - `key`: Configuration key
+   - `value`: Configuration value
 
 ---
 
 ## InfluxDB Schema
 ### **Measurements**
 1. **SensorData**
-   - `time`: Timestamp  
-   - `device_id`: ID of the device  
-   - `value`: Recorded sensor value  
+   - `time`: Timestamp
+   - `device_id`: ID of the device
+   - `value`: Recorded sensor value
+   - `type`: Data type (e.g., temperature, humidity)
+   - `source`: Source device or gateway
 
 ---
 
 ## Redis Usage
-- **Session Storage:** User authentication tokens.  
-- **Caching:** Frequently accessed device data.  
+- **Session Storage:** User authentication tokens.
+- **Caching:** Frequently accessed device data.
 
 ---
 
 ## Future Enhancements
 - Database migration scripts for version control.
 - Backup and recovery strategy.
+- Advanced schema for anomaly detection (SensGuard).
