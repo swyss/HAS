@@ -1,14 +1,15 @@
-package com.has.backend.echostream.controller;
+package com.has.backend.echostream.controller.app;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/test")
-public class TestController {
+@RequestMapping("/api/health")
+public class HealthController {
+
     @GetMapping
-    public String testEndpoint() {
-        return "Swagger is working!";
+    public String healthCheck() {
+        return "EchoStream Backend is running.";
     }
 }

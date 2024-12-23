@@ -1,7 +1,6 @@
 package com.has.backend.echostream.models;
 
 import jakarta.persistence.*;
-import lombok.Data;
 
 import java.time.LocalDateTime;
 
