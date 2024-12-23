@@ -1,11 +1,12 @@
 package com.has.backend.echostream.models;
 
+import com.has.backend.echostream.models.app.ActuatorCommand;
 import jakarta.persistence.*;
 
+import java.util.List;
+
 @Entity
-
 public class Device {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -16,7 +17,15 @@ public class Device {
     private String location;
 
     @Column(nullable = false, unique = true)
-    private String serialNumber; // Unique Identifier for the device
+    private String serialNumber;
+
+    @OneToMany(mappedBy = "device", cascade = CascadeType.ALL)
+    private List<SensorData> sensorData;
+
+    @OneToMany(mappedBy = "device", cascade = CascadeType.ALL)
+    private List<ActuatorCommand> actuatorCommands;
+
+    // Getter & Setter
 
     public Long getId() {
         return id;
@@ -64,5 +73,21 @@ public class Device {
 
     public void setSerialNumber(String serialNumber) {
         this.serialNumber = serialNumber;
+    }
+
+    public List<SensorData> getSensorData() {
+        return sensorData;
+    }
+
+    public void setSensorData(List<SensorData> sensorData) {
+        this.sensorData = sensorData;
+    }
+
+    public List<ActuatorCommand> getActuatorCommands() {
+        return actuatorCommands;
+    }
+
+    public void setActuatorCommands(List<ActuatorCommand> actuatorCommands) {
+        this.actuatorCommands = actuatorCommands;
     }
 }

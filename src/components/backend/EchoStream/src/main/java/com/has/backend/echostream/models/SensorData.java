@@ -1,8 +1,6 @@
 package com.has.backend.echostream.models;
 
-
 import jakarta.persistence.*;
-
 import java.time.LocalDateTime;
 
 @Entity
@@ -14,14 +12,17 @@ public class SensorData {
 
     @ManyToOne
     @JoinColumn(name = "device_id", nullable = false)
-    private Device device; // Associated device
+    private Device device;
 
-    private String type; // Temperature, Humidity, etc.
+    private String type; // e.g., Temperature, Humidity
     private Double value; // Sensor reading value
 
     @Column(nullable = false)
-    private LocalDateTime timestamp; // Time of data capture
+    private LocalDateTime timestamp; // Timestamp of data capture
 
+    private Boolean isAnomalous; // Indicates if the data is flagged as anomalous
+
+    // Getters and Setters
     public Long getId() {
         return id;
     }
@@ -61,5 +62,12 @@ public class SensorData {
     public void setTimestamp(LocalDateTime timestamp) {
         this.timestamp = timestamp;
     }
-}
 
+    public Boolean getIsAnomalous() {
+        return isAnomalous;
+    }
+
+    public void setIsAnomalous(Boolean isAnomalous) {
+        this.isAnomalous = isAnomalous;
+    }
+}
