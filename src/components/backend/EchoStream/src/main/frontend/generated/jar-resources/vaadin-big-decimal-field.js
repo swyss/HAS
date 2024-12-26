@@ -16,11 +16,11 @@
 let memoizedTemplate;
 
 customElements.whenDefined('vaadin-text-field').then(() => {
-  class BigDecimalFieldElement extends customElements.get('vaadin-text-field') {
-    static get template() {
-      if (!memoizedTemplate) {
-        memoizedTemplate = super.template.cloneNode(true);
-        memoizedTemplate.innerHTML += `<style>
+    class BigDecimalFieldElement extends customElements.get('vaadin-text-field') {
+        static get template() {
+            if (!memoizedTemplate) {
+                memoizedTemplate = super.template.cloneNode(true);
+                memoizedTemplate.innerHTML += `<style>
                 :host {
                   width: 8em;
                 }
@@ -33,37 +33,37 @@ customElements.whenDefined('vaadin-text-field').then(() => {
                   --_lumo-text-field-overflow-mask-image: linear-gradient(to left, transparent, #000 1.25em) !important;
                 }
           </style>`;
-      }
-      return memoizedTemplate;
-    }
-
-    static get is() {
-      return 'vaadin-big-decimal-field';
-    }
-
-    static get properties() {
-      return {
-        _decimalSeparator: {
-          type: String,
-          value: '.',
-          observer: '__decimalSeparatorChanged'
+            }
+            return memoizedTemplate;
         }
-      };
+
+        static get is() {
+            return 'vaadin-big-decimal-field';
+        }
+
+        static get properties() {
+            return {
+                _decimalSeparator: {
+                    type: String,
+                    value: '.',
+                    observer: '__decimalSeparatorChanged'
+                }
+            };
+        }
+
+        ready() {
+            super.ready();
+            this.inputElement.setAttribute('inputmode', 'decimal');
+        }
+
+        __decimalSeparatorChanged(separator, oldSeparator) {
+            this.allowedCharPattern = '[-+\\d' + separator + ']';
+
+            if (this.value && oldSeparator) {
+                this.value = this.value.split(oldSeparator).join(separator);
+            }
+        }
     }
 
-    ready() {
-      super.ready();
-      this.inputElement.setAttribute('inputmode', 'decimal');
-    }
-
-    __decimalSeparatorChanged(separator, oldSeparator) {
-      this.allowedCharPattern = '[-+\\d' + separator + ']';
-
-      if (this.value && oldSeparator) {
-        this.value = this.value.split(oldSeparator).join(separator);
-      }
-    }
-  }
-
-  customElements.define(BigDecimalFieldElement.is, BigDecimalFieldElement);
+    customElements.define(BigDecimalFieldElement.is, BigDecimalFieldElement);
 });

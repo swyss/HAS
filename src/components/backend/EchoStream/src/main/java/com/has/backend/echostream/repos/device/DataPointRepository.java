@@ -7,5 +7,6 @@ import java.util.List;
 
 public interface DataPointRepository extends JpaRepository<DataPoint, Long> {
     List<DataPoint> findByDeviceId(Long deviceId);
+
     List<DataPoint> findByType(String type);
 }

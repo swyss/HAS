@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface ActuatorCommandRepository extends JpaRepository<ActuatorCommand, Long> {
     List<ActuatorCommand> findByDeviceId(Long deviceId);
+
     List<ActuatorCommand> findByStatus(String status);
 }
 

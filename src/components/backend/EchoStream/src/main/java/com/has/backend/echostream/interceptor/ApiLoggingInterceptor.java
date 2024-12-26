@@ -16,7 +16,6 @@ import java.time.format.DateTimeFormatter;
 @Component
 public class ApiLoggingInterceptor implements HandlerInterceptor {
 
-    private final ApiLogRepository apiLogRepository;
     // ANSI escape codes for colored console output
     public static final String ANSI_RESET = "\u001B[0m";
     public static final String ANSI_BLACK = "\u001B[30m";
@@ -27,13 +26,12 @@ public class ApiLoggingInterceptor implements HandlerInterceptor {
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_CYAN = "\u001B[36m";
     public static final String ANSI_WHITE = "\u001B[37m";
-
+    // Timestamp formatter for consistent formatting
+    private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    private final ApiLogRepository apiLogRepository;
     // Configuration flag to toggle between detailed and simple logging
     @Value("${app_settings.api.log.detail}")
     private boolean logDetail;
-
-    // Timestamp formatter for consistent formatting
-    private static final DateTimeFormatter TIMESTAMP_FORMATTER = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
 
     public ApiLoggingInterceptor(ApiLogRepository apiLogRepository) {
         this.apiLogRepository = apiLogRepository;
@@ -110,10 +108,10 @@ public class ApiLoggingInterceptor implements HandlerInterceptor {
             return String.format(
                     "%-10s %-20s %-70s %-10s %-10s",
                     ANSI_CYAN + "[API LOG]" + ANSI_RESET,
-                    ANSI_PURPLE+"Timestamp: " + ANSI_RESET+ formattedTimestamp,
-                    ANSI_PURPLE+"Endpoint: " + ANSI_YELLOW+ "-> * "+ apiLog.getEndpoint().trim()+ " *"+ ANSI_RESET,
-                    ANSI_PURPLE+"Status: " + ANSI_RESET+ getStatusColor(apiLog.getStatusCode()) + apiLog.getStatusCode() + ANSI_RESET,
-                    ANSI_PURPLE+"Latency: " + ANSI_RESET+ apiLog.getLatency() + "ms"
+                    ANSI_PURPLE + "Timestamp: " + ANSI_RESET + formattedTimestamp,
+                    ANSI_PURPLE + "Endpoint: " + ANSI_YELLOW + "-> * " + apiLog.getEndpoint().trim() + " *" + ANSI_RESET,
+                    ANSI_PURPLE + "Status: " + ANSI_RESET + getStatusColor(apiLog.getStatusCode()) + apiLog.getStatusCode() + ANSI_RESET,
+                    ANSI_PURPLE + "Latency: " + ANSI_RESET + apiLog.getLatency() + "ms"
             );
         }
 
@@ -121,10 +119,10 @@ public class ApiLoggingInterceptor implements HandlerInterceptor {
         return String.format(
                 "%-10s %-20s %-70s %-10s %-10s\nRequest: %s\nResponse: %s",
                 ANSI_CYAN + "[API LOG]" + ANSI_RESET,
-                ANSI_PURPLE+"Timestamp: " + ANSI_RESET+ formattedTimestamp,
-                ANSI_PURPLE+"Method: " +ANSI_RESET+ apiLog.getHttpMethod(),
-                ANSI_PURPLE+"Endpoint: " + ANSI_YELLOW+ "-> * "+ apiLog.getEndpoint().trim()+ " *"+ ANSI_RESET,
-                ANSI_PURPLE+"Status: " + ANSI_RESET+ getStatusColor(apiLog.getStatusCode()) + apiLog.getStatusCode() + ANSI_RESET,
+                ANSI_PURPLE + "Timestamp: " + ANSI_RESET + formattedTimestamp,
+                ANSI_PURPLE + "Method: " + ANSI_RESET + apiLog.getHttpMethod(),
+                ANSI_PURPLE + "Endpoint: " + ANSI_YELLOW + "-> * " + apiLog.getEndpoint().trim() + " *" + ANSI_RESET,
+                ANSI_PURPLE + "Status: " + ANSI_RESET + getStatusColor(apiLog.getStatusCode()) + apiLog.getStatusCode() + ANSI_RESET,
                 apiLog.getRequestDetails(),
                 apiLog.getResponseDetails()
         );
