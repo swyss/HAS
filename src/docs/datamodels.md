@@ -1,0 +1,173 @@
+# **Data Model Documentation**
+
+## **Overview**
+This document outlines the data models used in the application, their fields, relationships, and purposes. Each model is designed to fulfill specific roles within the application and to facilitate interactions between devices, users, and the system.
+
+---
+
+## **1. Core Models**
+
+### **1.1 User**
+**Purpose**: Represents a user of the application.
+
+| **Field**    | **Type**  | **Description**                              |
+|--------------|-----------|----------------------------------------------|
+| `id`         | `Long`    | Unique identifier for the user.             |
+| `username`   | `String`  | Unique name for the user.                   |
+| `password`   | `String`  | Encrypted password for authentication.      |
+| `roles`      | `Set<Role>` | Roles assigned to the user.               |
+
+**Relationships**:
+- Many-to-Many with `Role`.
+- One-to-Many with `Session`.
+- One-to-Many with `AuditTrail`.
+
+---
+
+### **1.2 Role**
+**Purpose**: Defines user permissions and access levels.
+
+| **Field**    | **Type**  | **Description**                              |
+|--------------|-----------|----------------------------------------------|
+| `id`         | `Long`    | Unique identifier for the role.             |
+| `name`       | `String`  | Name of the role (e.g., Admin, User).        |
+
+**Relationships**:
+- Many-to-Many with `User`.
+
+---
+
+### **1.3 Session**
+**Purpose**: Tracks user sessions for authentication and activity.
+
+| **Field**    | **Type**  | **Description**                              |
+|--------------|-----------|----------------------------------------------|
+| `id`         | `Long`    | Unique identifier for the session.          |
+| `user`       | `User`    | Associated user for the session.            |
+| `token`      | `String`  | Unique session token.                       |
+| `expiresAt`  | `Long`    | Expiration timestamp of the session.        |
+
+**Relationships**:
+- Many-to-One with `User`.
+
+---
+
+## **2. Device Management**
+
+### **2.1 Device**
+**Purpose**: Represents devices in the system (e.g., sensors, actuators).
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the device.       |
+| `name`           | `String`        | Device name.                            |
+| `type`           | `String`        | Device type (e.g., Sensor, Actuator).   |
+| `status`         | `String`        | Device status (e.g., Online, Offline).  |
+| `serialNumber`   | `String`        | Unique identifier for the device.       |
+| `location`       | `String`        | Device's physical or logical location.  |
+
+**Relationships**:
+- One-to-Many with `SensorData`.
+- One-to-Many with `ActuatorCommand`.
+- Many-to-One with `DeviceGroup`.
+- One-to-Many with `DataPoint`.
+
+---
+
+### **2.2 SensorData**
+**Purpose**: Represents aggregated or historical data from sensors.
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the data entry.   |
+| `device`         | `Device`        | Associated device for the data.         |
+| `type`           | `String`        | Type of data (e.g., temperature).       |
+| `value`          | `Double`        | Recorded sensor value.                  |
+| `timestamp`      | `LocalDateTime` | Time of data collection.                |
+| `isAnomalous`    | `Boolean`       | Indicates if the data is flagged as an anomaly. |
+
+**Relationships**:
+- Many-to-One with `Device`.
+
+---
+
+### **2.3 ActuatorCommand**
+**Purpose**: Represents commands sent to actuators.
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the command.      |
+| `device`         | `Device`        | Associated actuator device.             |
+| `command`        | `String`        | Command type (e.g., TURN_ON, TURN_OFF). |
+| `timestamp`      | `LocalDateTime` | Time the command was issued.            |
+| `status`         | `String`        | Command status (e.g., SUCCESS).         |
+
+**Relationships**:
+- Many-to-One with `Device`.
+
+---
+
+### **2.4 DeviceGroup**
+**Purpose**: Groups devices into logical categories.
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the group.        |
+| `name`           | `String`        | Group name (e.g., Living Room).         |
+
+**Relationships**:
+- One-to-Many with `Device`.
+
+---
+
+### **2.5 DataPoint**
+**Purpose**: Represents individual data points generated by devices.
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the data point.   |
+| `device`         | `Device`        | Associated device for the data point.   |
+| `type`           | `String`        | Type of data (e.g., temperature).       |
+| `value`          | `Double`        | Recorded data value.                    |
+| `timestamp`      | `LocalDateTime` | Time of data collection.                |
+| `unit`           | `String`        | Unit of measurement (e.g., °C).         |
+| `metadata`       | `String`        | Optional descriptive information.       |
+
+**Relationships**:
+- Many-to-One with `Device`.
+
+---
+
+## **3. Logging and Monitoring**
+
+### **3.1 SystemLog**
+**Purpose**: Captures system-level events and messages.
+
+| **Field**    | **Type**  | **Description**                              |
+|--------------|-----------|----------------------------------------------|
+| `id`         | `Long`    | Unique identifier for the log entry.        |
+| `level`      | `String`  | Log level (e.g., INFO, ERROR).              |
+| `message`    | `String`  | Log message.                                |
+| `timestamp`  | `LocalDateTime` | Time of the log entry.               |
+| `source`     | `String`  | Source of the log (optional).               |
+
+**Relationships**: None
+
+---
+
+### **3.2 ApiLog**
+**Purpose**: Captures details of API requests and responses.
+
+| **Field**    | **Type**  | **Description**                              |
+|--------------|-----------|----------------------------------------------|
+| `id`         | `Long`    | Unique identifier for the log entry.        |
+| `timestamp`  | `LocalDateTime` | Time of the API call.                |
+| `httpMethod` | `String`  | HTTP method (e.g., GET, POST).              |
+| `endpoint`   | `String`  | API endpoint accessed.                      |
+| `clientIp`   | `String`  | Client's IP address.                        |
+| `requestDetails` | `String` | Request payload (optional).             |
+| `responseDetails` | `String` | Response payload (optional).           |
+| `statusCode` | `int`     | HTTP status code.                           |
+| `latency`    | `long`    | Response time in milliseconds.              |
+
+**Relationships**: None
