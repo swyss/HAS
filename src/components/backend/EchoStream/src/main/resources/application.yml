@@ -1,0 +1,35 @@
+# Application configuration for EchoStream Backend
+server:
+  port: 8080  # Port for Spring Boot application
+
+# PostgreSQL Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/echostream_db
+    username: admin
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update   # Use 'validate' or 'none' in production
+    show-sql: false # LOG
+    open-in-view: false
+
+# Redis Configuration
+redis:
+  host: localhost
+  port: 6379
+
+# InfluxDB Configuration
+influx:
+  url: http://localhost:8087
+  token: has-backend_token
+  bucket: has-backend_bucket
+  org: has-backend_org
+
+# APP
+app_settings:
+  api:
+    base-url: http://localhost:8080/api
+    log-detail: false
+
