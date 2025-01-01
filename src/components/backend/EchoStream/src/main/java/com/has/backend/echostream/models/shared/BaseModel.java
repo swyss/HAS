@@ -7,19 +7,25 @@ import lombok.Getter;
 
 @Getter
 public abstract class BaseModel {
-    private final HAS_SysId sysId;
-    private final HAS_Status status;
-    private final HAS_Type type;
+    private final HAS_SysId has_sysId;
+    private final HAS_Status has_status;
+    private final HAS_Type has_type;
 
     // Primary constructor
     public BaseModel(HAS_SysId sysId, HAS_Status status, HAS_Type type) {
-        this.sysId = sysId;
-        this.status = status;
-        this.type = type;
+        this.has_sysId = sysId;
+        this.has_status = status;
+        this.has_type = type;
     }
 
     // Overloaded constructor to auto-generate status using factory logic
     public BaseModel(HAS_SysId sysId, HAS_Type type) {
         this(sysId, StatusFactory.getStatusForType(type), type);
+    }
+
+    public BaseModel() {
+        has_sysId = new HAS_SysId() {};
+        has_status = StatusFactory.getStatusForType(new HAS_Type("defaultCoreType", "defaultSubType", "defaultDescription", "defaultUnit"));
+        has_type = new HAS_Type("defaultCoreType", "defaultSubType", "defaultDescription", "defaultUnit");
     }
 }

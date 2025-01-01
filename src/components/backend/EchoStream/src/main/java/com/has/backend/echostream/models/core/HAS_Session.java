@@ -55,7 +55,7 @@ public class HAS_Session extends BaseModel {
     }
 
     public HAS_Session() {
-        super(null, null, null);
+        super();
     }
 
     // Static factory method for encapsulated instance creation

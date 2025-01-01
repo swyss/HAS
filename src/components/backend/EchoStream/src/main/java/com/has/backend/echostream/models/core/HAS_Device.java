@@ -12,6 +12,7 @@ import lombok.Setter;
 import java.time.LocalDateTime;
 import java.util.HashSet;
 import java.util.Set;
+import java.util.UUID;
 
 @Getter
 @Setter
@@ -46,21 +47,21 @@ public class HAS_Device extends BaseModel {
     @JoinColumn(name = COL_DEVICE_GROUP_ID)
     private DeviceGroup deviceGroup;
 
-    @OneToMany(mappedBy = "has_device",CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "has_device", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<ActuatorCommand> actuatorCommands = new HashSet<>(); // Moved initialization here
 
-    @OneToMany(mappedBy = "has_device", CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "has_device", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<DataPoint> dataPoints = new HashSet<>();
 
-    @OneToMany(mappedBy = "has_device", CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "has_device", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<SensorData> sensorData = new HashSet<>();
 
-    @OneToOne(mappedBy = "has_device", CascadeType.ALL, orphanRemoval = true)
+    @OneToOne(mappedBy = "has_device", cascade = CascadeType.ALL, orphanRemoval = true)
     private DeviceCharacteristics deviceCharacteristics;
 
     // Default Constructor
     public HAS_Device() {
-        this(null, null); // Constructor chaining
+        super();
     }
 
     // Constructor with parameters

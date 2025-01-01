@@ -34,6 +34,6 @@ public class SensorData extends BaseModel {
     }
 
     public SensorData() {
-        super(null, null, null);
+        super();
     }
 }

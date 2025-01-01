@@ -35,6 +35,12 @@ public class HAS_Notification extends BaseModel {
     @Column(nullable = false)
     private LocalDateTime timestamp;
 
+    @Column(nullable = false)
+    private String type;
+
+    @Column(nullable = false)
+    private boolean isRead;
+
     @Column(name = COLUMN_NOTIFICATION_TYPE, nullable = false) // Renamed for clarity
     private String notificationType;
 
@@ -55,7 +61,7 @@ public class HAS_Notification extends BaseModel {
         this.message = message;
         this.timestamp = timestamp;
         this.notificationType = type.getCoretype(); // Assumes type has a core type
-        this.notificationStatus = status.getCurrent(); // Assumes status has a current status
+        this.notificationStatus = status.getCurrentStatus(); // Assumes status has a current status
         this.device = device;
     }
 
@@ -63,6 +69,6 @@ public class HAS_Notification extends BaseModel {
      * Default constructor for JPA.
      */
     public HAS_Notification() {
-        super(null, null, null);
+        super();
     }
 }

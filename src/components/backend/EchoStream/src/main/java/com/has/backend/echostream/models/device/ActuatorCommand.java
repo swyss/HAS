@@ -37,6 +37,6 @@ public class ActuatorCommand extends BaseModel {
     }
 
     public ActuatorCommand() {
-        super(null, null, null);
+        super();
     }
 }

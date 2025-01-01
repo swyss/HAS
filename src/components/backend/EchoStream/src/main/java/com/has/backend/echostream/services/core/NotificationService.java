@@ -22,7 +22,7 @@ public class NotificationService {
     public void markAsRead(Long id) {
         HAS_Notification notification = notificationRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Notification not found"));
-        notification.setIsRead(true);
+        notification.setRead(true);
         notificationRepository.save(notification);
     }
 

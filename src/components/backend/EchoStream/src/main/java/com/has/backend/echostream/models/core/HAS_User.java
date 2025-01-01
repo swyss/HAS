@@ -45,7 +45,7 @@ public class HAS_User extends BaseModel {
 
     // Constructors
     public HAS_User() {
-        super(null, null, null);
+        super();
     }
 
     private HAS_User(HAS_SysId sysId, String username, HAS_Type type) {

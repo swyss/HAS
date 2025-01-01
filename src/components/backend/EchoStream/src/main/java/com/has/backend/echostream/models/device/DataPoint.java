@@ -37,6 +37,6 @@ public class DataPoint extends BaseModel {
     }
 
     public DataPoint() {
-        super(null, null, null);
+        super();
     }
 }

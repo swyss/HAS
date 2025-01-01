@@ -46,7 +46,7 @@ public class HAS_Equipment extends BaseModel {
      * Public default constructor required by JPA.
      */
     public HAS_Equipment() {
-        super(null, null, null);
+        super();
     }
 
     /**
