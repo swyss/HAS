@@ -32,10 +32,9 @@ public class ActuatorCommand extends BaseModel {
     @JoinColumn(name = "has_device_id", nullable = false)
     private HAS_Device has_device;
 
-    public ActuatorCommand(HAS_SysId has_sysId, HAS_Status has_status, HAS_Type has_type) {
-        super(has_sysId, has_status, has_type);
-    }
-
+    /**
+     * Public default constructor required by JPA.
+     */
     public ActuatorCommand() {
         super();
     }

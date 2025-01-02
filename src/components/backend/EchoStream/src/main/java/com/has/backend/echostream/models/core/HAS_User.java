@@ -43,18 +43,11 @@ public class HAS_User extends BaseModel {
     )
     private Set<UserRole> userRoles = new HashSet<>(); // Moved initialization here
 
-    // Constructors
+    /**
+     * Public default constructor required by JPA.
+     */
     public HAS_User() {
         super();
     }
 
-    private HAS_User(HAS_SysId sysId, String username, HAS_Type type) {
-        super(sysId, null, type);
-        this.username = username;
-    }
-
-    // Static factory method
-    public static HAS_User of(HAS_SysId sysId, String username, HAS_Type type) {
-        return new HAS_User(sysId, username, type);
-    }
 }

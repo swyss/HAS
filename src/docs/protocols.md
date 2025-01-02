@@ -1,7 +1,7 @@
 # Supported Protocols Documentation
 
 ## Overview
-The HAS system integrates various smart home protocols to enable communication with a wide range of devices and services.
+The HAS system integrates various smart home protocols to enable communication with a wide range of devices and services. SimulaX expands this capability by adding support for REST APIs and WebSocket for real-time simulation data.
 
 ---
 
@@ -45,6 +45,12 @@ The HAS system integrates various smart home protocols to enable communication w
   - Integration of proprietary or custom-built devices.
   - Dynamic status updates using SystemMessage models.
 
+### **7. SimulaX REST and WebSocket APIs**
+- **Purpose:** Real-time simulation data management and retrieval.
+- **Use Cases:**
+  - Retrieve simulation configurations.
+  - Stream real-time data updates for active simulations via WebSocket.
+
 ---
 
 ## Future Protocols
@@ -55,6 +61,6 @@ The HAS system integrates various smart home protocols to enable communication w
 ---
 
 ## Enhanced Use Cases
-The addition of **SensGuard** introduces advanced monitoring capabilities for:
-- Detecting sensor anomalies.
-- Monitoring system health and error diagnostics.
+The addition of **SimulaX** introduces advanced monitoring capabilities for:
+- Testing system responses with simulated data.
+- Generating data for predictive maintenance and analytics scenarios.

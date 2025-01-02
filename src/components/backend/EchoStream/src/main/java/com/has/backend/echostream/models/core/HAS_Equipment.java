@@ -35,25 +35,9 @@ public class HAS_Equipment extends BaseModel {
     private LocalDateTime createDate; // Renamed for consistency with other classes
 
     /**
-     * Protected constructor for enforcing controlled initialization.
-     * This also centralizes `super` invocation logic.
-     */
-    protected HAS_Equipment(HAS_SysId hasSysId, HAS_Type hasType) {
-        super(hasSysId, StatusFactory.getStatusForType(hasType), hasType);
-    }
-
-    /**
      * Public default constructor required by JPA.
      */
     public HAS_Equipment() {
         super();
-    }
-
-    /**
-     * Static factory method for creating a new instance with specific parameters.
-     * Provides better readability and avoids direct usage of the parameterized constructor.
-     */
-    public static HAS_Equipment createWithType(HAS_SysId hasSysId, HAS_Type hasType) {
-        return new HAS_Equipment(hasSysId, hasType);
     }
 }

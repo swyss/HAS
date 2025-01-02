@@ -46,6 +46,14 @@ The HAS architecture is divided into the following components:
   - Anomaly detection for real-time and historical data.
   - Health monitoring and error diagnostics.
 
+### **7. Data Simulation (SimulaX)**
+- **Role:** Simulates data for system testing and development.
+- **Key Features:**
+  - Backend: ASP.NET Core for generating and managing simulations.
+  - Frontend: Vue.js with Quasar for dashboards.
+  - Database: PostgreSQL and InfluxDB for data storage.
+  - Communication: REST APIs and WebSocket for real-time updates.
+
 ---
 
 ## Data Flow
@@ -55,6 +63,8 @@ The HAS architecture is divided into the following components:
    The gateway forwards data to the Core Backend using MQTT or REST APIs.
 3. **Backend → Applications:**
    The backend provides data to the Admin Console, Visualization, and Mobile Application via RESTful APIs and WebSockets.
+4. **SimulaX → Backend:**
+   Simulated data is forwarded to the Core Backend for testing and analysis using REST APIs.
 
 ---
 
@@ -65,7 +75,8 @@ The system is containerized and deployed using **Docker**. The following service
 3. **Visualization Service**
 4. **Gateway Service**
 5. **Sensor Monitoring Service**
-6. **Databases (PostgreSQL, InfluxDB, Redis)**
+6. **SimulaX Service**
+7. **Databases (PostgreSQL, InfluxDB, Redis)**
 
 Orchestration is managed using **Docker Compose** or Kubernetes for scalability.
 
@@ -75,60 +86,4 @@ Orchestration is managed using **Docker Compose** or Kubernetes for scalability.
 - High availability deployment using Kubernetes.
 - Cloud integration for additional scalability.
 - Machine learning models for advanced anomaly detection.
-
-# Updated Setup Documentation
-
-## Prerequisites
-- Docker and Docker Compose
-- Java 17+ (Core Backend)
-- Node.js 16+ and Yarn (Frontend)
-- Python 3.9+ (Gateway and SensGuard)
-- PostgreSQL, InfluxDB, and Redis installed
-
----
-
-## Installation Steps
-
-### 1. Clone the Repository
-```bash
-git clone https://github.com/<username>/HAS.git
-cd HAS
-```
-
-### 2. Start Backend
-```bash
-cd components/backend
-mvn spring-boot:run
-```
-
-### 3. Start Admin Console
-```bash
-cd components/admin
-yarn install
-yarn serve
-```
-
-### 4. Start Gateway
-```bash
-cd components/gateway
-pip install -r requirements.txt
-python main.py
-```
-
-### 5. Start Sensor Monitoring (SensGuard)
-```bash
-cd components/sensguard
-pip install -r requirements.txt
-python monitor.py
-```
-
-### 6. Docker Setup
-Start all services using Docker Compose:
-```bash
-docker-compose up
-```
-
----
-
-## Future Enhancements
-- Kubernetes deployment for scalability.
+- Enhanced simulation scenarios in SimulaX.

@@ -59,18 +59,10 @@ public class HAS_Device extends BaseModel {
     @OneToOne(mappedBy = "has_device", cascade = CascadeType.ALL, orphanRemoval = true)
     private DeviceCharacteristics deviceCharacteristics;
 
-    // Default Constructor
+    /**
+     * Public default constructor required by JPA.
+     */
     public HAS_Device() {
         super();
-    }
-
-    // Constructor with parameters
-    private HAS_Device(HAS_SysId has_sysId, HAS_Type has_type) {
-        super(has_sysId, StatusFactory.getStatusForType(has_type), has_type);
-    }
-
-    // Static factory method for better expressivity
-    public static HAS_Device createWithType(HAS_SysId has_sysId, HAS_Type has_type) {
-        return new HAS_Device(has_sysId, has_type);
     }
 }

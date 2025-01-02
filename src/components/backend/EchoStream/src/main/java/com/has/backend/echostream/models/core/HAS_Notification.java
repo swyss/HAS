@@ -53,19 +53,6 @@ public class HAS_Notification extends BaseModel {
     private HAS_Device device;
 
     /**
-     * Parameterized constructor for explicit initialization with required values.
-     */
-    public HAS_Notification(HAS_SysId sysId, HAS_Status status, HAS_Type type, String message,
-                            LocalDateTime timestamp, HAS_Device device) {
-        super(sysId, status, type);
-        this.message = message;
-        this.timestamp = timestamp;
-        this.notificationType = type.getCoretype(); // Assumes type has a core type
-        this.notificationStatus = status.getCurrentStatus(); // Assumes status has a current status
-        this.device = device;
-    }
-
-    /**
      * Default constructor for JPA.
      */
     public HAS_Notification() {

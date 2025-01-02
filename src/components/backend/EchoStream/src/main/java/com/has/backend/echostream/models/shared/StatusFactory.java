@@ -7,7 +7,11 @@ import java.time.LocalDateTime;
 
 public class StatusFactory {
 
-    public static HAS_Status getStatusForType(HAS_Type has_type) {
-        return new HAS_Status(has_type.getCoretype(), has_type.getSubtype(), LocalDateTime.now(), has_type.getDescription());
+    public static HAS_Status getDefaultStatus(){
+        return new HAS_Status("defaultStatus", "none", LocalDateTime.now(), null);
+    }
+
+    public static HAS_Status getStatusForType(HAS_Type hasType) {
+        return new HAS_Status("defaultStatus", "none", LocalDateTime.now(), null);
     }
 }

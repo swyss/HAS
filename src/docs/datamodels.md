@@ -138,9 +138,42 @@ This document outlines the data models used in the application, their fields, re
 
 ---
 
-## **3. Logging and Monitoring**
+## **3. SimulaX Models**
 
-### **3.1 SystemLog**
+### **3.1 Simulation**
+**Purpose**: Represents a simulation session with configurations.
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the simulation.   |
+| `name`           | `String`        | Name of the simulation.                 |
+| `status`         | `String`        | Current status (e.g., Running).         |
+| `parameters`     | `JSON`          | Configuration parameters for the simulation. |
+| `createdAt`      | `LocalDateTime` | Timestamp of creation.                  |
+
+**Relationships**: None.
+
+---
+
+### **3.2 SimulationData**
+**Purpose**: Stores data points generated during simulations.
+
+| **Field**        | **Type**        | **Description**                          |
+|-------------------|-----------------|------------------------------------------|
+| `id`             | `Long`          | Unique identifier for the data entry.   |
+| `simulation`     | `Simulation`    | Associated simulation.                  |
+| `type`           | `String`        | Type of data (e.g., temperature).       |
+| `value`          | `Double`        | Generated simulation value.             |
+| `timestamp`      | `LocalDateTime` | Time of data generation.                |
+
+**Relationships**:
+- Many-to-One with `Simulation`.
+
+---
+
+## **4. Logging and Monitoring**
+
+### **4.1 SystemLog**
 **Purpose**: Captures system-level events and messages.
 
 | **Field**    | **Type**  | **Description**                              |
@@ -155,7 +188,7 @@ This document outlines the data models used in the application, their fields, re
 
 ---
 
-### **3.2 ApiLog**
+### **4.2 ApiLog**
 **Purpose**: Captures details of API requests and responses.
 
 | **Field**    | **Type**  | **Description**                              |

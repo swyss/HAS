@@ -29,10 +29,9 @@ public class SensorData extends BaseModel {
     private HAS_Device has_device;
 
 
-    public SensorData(HAS_SysId has_sysId, HAS_Status has_status, HAS_Type has_type) {
-        super(has_sysId, has_status, has_type);
-    }
-
+    /**
+     * Public default constructor required by JPA.
+     */
     public SensorData() {
         super();
     }

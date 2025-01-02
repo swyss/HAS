@@ -41,28 +41,11 @@ public class HAS_Session extends BaseModel {
     @Column(nullable = false, unique = true)
     private String token;
 
-    // Main constructor for controlled initialization
-    private HAS_Session(HAS_SysId hasSysId, HAS_Status hasStatus, HAS_Type hasType, HAS_User user,
-                        LocalDateTime startTimestamp, LocalDateTime stopTimestamp,
-                        String sessionName, String sessionDescription, String token) {
-        super(hasSysId, hasStatus, hasType);
-        this.user = user;
-        this.startTimestamp = startTimestamp;
-        this.stopTimestamp = stopTimestamp;
-        this.sessionName = sessionName;
-        this.sessionDescription = sessionDescription;
-        this.token = token;
-    }
-
+    /**
+     * Public default constructor required by JPA.
+     */
     public HAS_Session() {
         super();
     }
 
-    // Static factory method for encapsulated instance creation
-    @Builder
-    public static HAS_Session createWithDetails(HAS_SysId hasSysId, HAS_Status hasStatus, HAS_Type hasType, HAS_User user,
-                                                LocalDateTime startTimestamp, LocalDateTime stopTimestamp,
-                                                String sessionName, String sessionDescription, String token) {
-        return new HAS_Session(hasSysId, hasStatus, hasType, user, startTimestamp, stopTimestamp, sessionName, sessionDescription, token);
-    }
 }
