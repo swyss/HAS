@@ -1,31 +1,31 @@
 services:
   postgres:
     image: postgres
-    container_name: has_core-backend_postgres
+    container_name: has_admin-console_postgres
     restart: always
     environment:
       POSTGRES_USER: admin
       POSTGRES_PASSWORD: secret
-      POSTGRES_DB: echostream_db
+      POSTGRES_DB: adminhub_db
     ports:
       - "55210:5432"
     volumes:
-      - postgres_data:/var/lib/has/postgresql/data/core-backend
+      - postgres_data:/var/lib/has/postgresql/data/admin-console
 
   influxdb:
     image: influxdb
-    container_name: has_core-backend_influxdb
+    container_name: has_admin-console_influxdb
     restart: always
     environment:
       DOCKER_INFLUXDB_INIT_USERNAME: admin
       DOCKER_INFLUXDB_INIT_PASSWORD: secret
-      DOCKER_INFLUXDB_INIT_ORG: has_core-backend_org
-      DOCKER_INFLUXDB_INIT_BUCKET: has_core-backend_bucket
-      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: has_core-backend_token
+      DOCKER_INFLUXDB_INIT_ORG: has_admin-console_org
+      DOCKER_INFLUXDB_INIT_BUCKET: has_admin-console_bucket
+      DOCKER_INFLUXDB_INIT_ADMIN_TOKEN: has_admin-console_token
     ports:
       - "55230:8086"
     volumes:
-      - influxdb_data:/var/lib/has/influxdb2/core-backend
+      - influxdb_data:/var/lib/has/influxdb2/admin-console
 
 volumes:
   postgres_data:

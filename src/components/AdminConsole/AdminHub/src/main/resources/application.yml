@@ -1,0 +1,30 @@
+# Application configuration for EchoStream Backend
+server:
+  port: 55200  # Port for Spring Boot application
+
+# PostgreSQL Configuration
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:55210/adminhub_db
+    username: admin
+    password: secret
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update   # Use 'validate' or 'none' in production
+    show-sql: false # LOG
+    open-in-view: false
+
+# InfluxDB Configuration
+influx:
+  url: http://localhost:55230
+  token: has_admin-console_token
+  bucket: has_admin-console_bucket
+  org: has_admin-console_org
+
+# APP
+app_settings:
+  api:
+    base-url: http://localhost:55200/api
+    log-detail: false
+
