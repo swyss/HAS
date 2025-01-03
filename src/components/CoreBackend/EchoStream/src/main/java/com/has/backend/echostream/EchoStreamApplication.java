@@ -16,7 +16,7 @@ public class EchoStreamApplication implements CommandLineRunner {
     public void run(String... args) {
         System.out.println("***");
         System.out.println("======================================");
-        System.out.println("Application running at: http://localhost:8080/EchoStreamBoard");
+        System.out.println("Application running at: http://localhost:55100/EchoStreamBoard");
         System.out.println("======================================");
         System.out.println("***");
     }
