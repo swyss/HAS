@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.models.device;
+package com.has.echostream.backend.models.device;
 
-import com.has.core_backend.echostream.models.core.HAS_Device;
-import com.has.core_backend.echostream.models.shared.core.HAS_SysId;
+import com.has.echostream.backend.models.core.HAS_Device;
+import com.has.echostream.backend.models.shared.core.HAS_SysId;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

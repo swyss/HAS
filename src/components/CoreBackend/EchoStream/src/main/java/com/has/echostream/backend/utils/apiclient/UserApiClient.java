@@ -1,4 +1,4 @@
-package com.has.echostream.backend.helpers.apiclient;
+package com.has.echostream.backend.utils.apiclient;
 
 
 import com.has.echostream.backend.models.core.HAS_User;

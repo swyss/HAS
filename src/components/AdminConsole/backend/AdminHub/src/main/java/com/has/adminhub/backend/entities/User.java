@@ -1,8 +1,12 @@
-package com.has.backend.adminhub.entities;
+package com.has.adminhub.backend.entities;
 
 import jakarta.persistence.*;
-import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
+import java.util.Set;
+@Getter
+@Setter
 @Entity
 public class User {
     @Id

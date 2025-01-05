@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.controllers.log;
+package com.has.echostream.backend.controllers.log;
 
-import com.has.core_backend.echostream.models.log.SystemLog;
-import com.has.core_backend.echostream.services.log.SystemLogService;
+import com.has.echostream.backend.models.log.SystemLog;
+import com.has.echostream.backend.services.log.SystemLogService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;

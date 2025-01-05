@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.repos.device;
+package com.has.echostream.backend.repos.device;
 
-import com.has.core_backend.echostream.models.device.ActuatorCommand;
+import com.has.echostream.backend.models.device.ActuatorCommand;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

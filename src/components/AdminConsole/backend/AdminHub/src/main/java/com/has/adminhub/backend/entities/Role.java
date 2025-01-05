@@ -1,4 +1,4 @@
-package com.has.backend.adminhub.entities;
+package com.has.adminhub.backend.entities;
 
 import jakarta.persistence.*;
 import lombok.Getter;

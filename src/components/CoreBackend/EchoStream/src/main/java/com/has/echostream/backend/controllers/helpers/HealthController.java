@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream.controllers.helpers;
+package com.has.echostream.backend.controllers.helpers;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;

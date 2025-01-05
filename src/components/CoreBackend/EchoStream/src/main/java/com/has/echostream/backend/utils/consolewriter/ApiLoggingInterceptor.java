@@ -1,4 +1,4 @@
-package com.has.echostream.backend.helpers.interceptor;
+package com.has.echostream.backend.utils.consolewriter;
 
 import com.has.echostream.backend.models.log.ApiLog;
 import com.has.echostream.backend.repos.log.ApiLogRepository;

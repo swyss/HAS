@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.controllers.user;
+package com.has.echostream.backend.controllers.user;
 
-import com.has.core_backend.echostream.models.user.AuditTrail;
-import com.has.core_backend.echostream.services.user.AuditTrailService;
+import com.has.echostream.backend.models.user.AuditTrail;
+import com.has.echostream.backend.services.user.AuditTrailService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;

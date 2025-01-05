@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.models.user;
+package com.has.echostream.backend.models.user;
 
-import com.has.core_backend.echostream.models.core.HAS_User;
+import com.has.echostream.backend.models.core.HAS_User;
 import jakarta.persistence.*;
 
 import java.time.LocalDateTime;

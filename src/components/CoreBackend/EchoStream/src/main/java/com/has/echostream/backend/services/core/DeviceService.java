@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.core;
+package com.has.echostream.backend.services.core;
 
-import com.has.core_backend.echostream.models.core.HAS_Device;
-import com.has.core_backend.echostream.repos.core.DeviceRepository;
+import com.has.echostream.backend.models.core.HAS_Device;
+import com.has.echostream.backend.repos.core.DeviceRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

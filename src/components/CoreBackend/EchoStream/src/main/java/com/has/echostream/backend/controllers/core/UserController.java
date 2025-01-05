@@ -1,8 +1,8 @@
-package com.has.core_backend.echostream.controllers.core;
+package com.has.echostream.backend.controllers.core;
 
 
-import com.has.core_backend.echostream.models.core.HAS_User;
-import com.has.core_backend.echostream.services.user.UserService;
+import com.has.echostream.backend.models.core.HAS_User;
+import com.has.echostream.backend.services.user.UserService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

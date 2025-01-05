@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.models.shared;
+package com.has.echostream.backend.models.shared;
 
-import com.has.core_backend.echostream.models.shared.core.HAS_Type;
+import com.has.echostream.backend.models.shared.core.HAS_Type;
 
 public class TypeFactory {
 

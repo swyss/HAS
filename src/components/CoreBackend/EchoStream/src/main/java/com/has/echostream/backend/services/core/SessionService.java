@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.core;
+package com.has.echostream.backend.services.core;
 
-import com.has.core_backend.echostream.models.core.HAS_Session;
-import com.has.core_backend.echostream.repos.core.SessionRepository;
+import com.has.echostream.backend.models.core.HAS_Session;
+import com.has.echostream.backend.repos.core.SessionRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

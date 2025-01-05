@@ -1,5 +1,6 @@
-package com.has.core_backend.echostream;
+package com.has.echostream.backend;
 
+import com.has.echostream.backend.utils.consolewriter.AsciiArt;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -14,6 +15,7 @@ public class EchoStreamApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+
         System.out.println("***");
         System.out.println("======================================");
         System.out.println("Application running at: http://localhost:55100/EchoStreamBoard");

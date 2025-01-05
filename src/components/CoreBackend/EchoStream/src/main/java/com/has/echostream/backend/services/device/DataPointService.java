@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.device;
+package com.has.echostream.backend.services.device;
 
-import com.has.core_backend.echostream.models.device.DataPoint;
-import com.has.core_backend.echostream.repos.device.DataPointRepository;
+import com.has.echostream.backend.models.device.DataPoint;
+import com.has.echostream.backend.repos.device.DataPointRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

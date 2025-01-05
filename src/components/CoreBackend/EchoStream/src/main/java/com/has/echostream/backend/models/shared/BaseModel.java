@@ -1,8 +1,8 @@
-package com.has.core_backend.echostream.models.shared;
+package com.has.echostream.backend.models.shared;
 
-import com.has.core_backend.echostream.models.shared.core.HAS_Status;
-import com.has.core_backend.echostream.models.shared.core.HAS_SysId;
-import com.has.core_backend.echostream.models.shared.core.HAS_Type;
+import com.has.echostream.backend.models.shared.core.HAS_Status;
+import com.has.echostream.backend.models.shared.core.HAS_SysId;
+import com.has.echostream.backend.models.shared.core.HAS_Type;
 import lombok.Getter;
 
 import java.util.UUID;

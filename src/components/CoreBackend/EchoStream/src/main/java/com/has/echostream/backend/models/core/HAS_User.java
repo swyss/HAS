@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.models.core;
+package com.has.echostream.backend.models.core;
 
-import com.has.core_backend.echostream.models.shared.BaseModel;
-import com.has.core_backend.echostream.models.user.UserRole;
+import com.has.echostream.backend.models.shared.BaseModel;
+import com.has.echostream.backend.models.user.UserRole;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

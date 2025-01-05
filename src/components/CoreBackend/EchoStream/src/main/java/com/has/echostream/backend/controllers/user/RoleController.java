@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.controllers.user;
+package com.has.echostream.backend.controllers.user;
 
-import com.has.core_backend.echostream.models.user.UserRole;
-import com.has.core_backend.echostream.services.core.RoleService;
+import com.has.echostream.backend.models.user.UserRole;
+import com.has.echostream.backend.services.core.RoleService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

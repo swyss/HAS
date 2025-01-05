@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.core;
+package com.has.echostream.backend.services.core;
 
-import com.has.core_backend.echostream.models.core.HAS_Notification;
-import com.has.core_backend.echostream.repos.core.NotificationRepository;
+import com.has.echostream.backend.models.core.HAS_Notification;
+import com.has.echostream.backend.repos.core.NotificationRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

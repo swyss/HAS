@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream.config;
+package com.has.echostream.backend.config;
 
 import com.vaadin.flow.spring.annotation.EnableVaadin;
 import org.springframework.context.annotation.Configuration;

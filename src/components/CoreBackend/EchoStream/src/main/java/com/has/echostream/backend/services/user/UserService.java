@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.user;
+package com.has.echostream.backend.services.user;
 
-import com.has.core_backend.echostream.models.core.HAS_User;
-import com.has.core_backend.echostream.repos.user.UserRepository;
+import com.has.echostream.backend.models.core.HAS_User;
+import com.has.echostream.backend.repos.user.UserRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
 

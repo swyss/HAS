@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream.models.shared.core;
+package com.has.echostream.backend.models.shared.core;
 
 import lombok.Getter;
 

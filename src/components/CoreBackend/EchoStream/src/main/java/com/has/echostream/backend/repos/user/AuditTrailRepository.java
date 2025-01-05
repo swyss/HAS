@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.repos.user;
+package com.has.echostream.backend.repos.user;
 
-import com.has.core_backend.echostream.models.user.AuditTrail;
+import com.has.echostream.backend.models.user.AuditTrail;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream.views;
+package com.has.echostream.backend.views;
 
 
 import com.vaadin.flow.component.Component;

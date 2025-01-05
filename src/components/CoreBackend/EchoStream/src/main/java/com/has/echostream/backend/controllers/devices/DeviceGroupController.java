@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.controllers.devices;
+package com.has.echostream.backend.controllers.devices;
 
-import com.has.core_backend.echostream.models.device.DeviceGroup;
-import com.has.core_backend.echostream.services.device.DeviceGroupService;
+import com.has.echostream.backend.models.device.DeviceGroup;
+import com.has.echostream.backend.services.device.DeviceGroupService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

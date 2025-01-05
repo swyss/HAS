@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.controllers.core;
+package com.has.echostream.backend.controllers.core;
 
-import com.has.core_backend.echostream.models.core.HAS_Session;
-import com.has.core_backend.echostream.services.core.SessionService;
+import com.has.echostream.backend.models.core.HAS_Session;
+import com.has.echostream.backend.services.core.SessionService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

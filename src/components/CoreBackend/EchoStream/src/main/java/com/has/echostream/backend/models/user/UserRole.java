@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream.models.user;
+package com.has.echostream.backend.models.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;

@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.log;
+package com.has.echostream.backend.services.log;
 
-import com.has.core_backend.echostream.models.log.ApiLog;
-import com.has.core_backend.echostream.repos.log.ApiLogRepository;
+import com.has.echostream.backend.models.log.ApiLog;
+import com.has.echostream.backend.repos.log.ApiLogRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

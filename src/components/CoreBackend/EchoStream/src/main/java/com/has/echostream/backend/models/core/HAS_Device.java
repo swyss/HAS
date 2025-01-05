@@ -1,8 +1,8 @@
-package com.has.core_backend.echostream.models.core;
+package com.has.echostream.backend.models.core;
 
 
-import com.has.core_backend.echostream.models.device.*;
-import com.has.core_backend.echostream.models.shared.BaseModel;
+import com.has.echostream.backend.models.device.*;
+import com.has.echostream.backend.models.shared.BaseModel;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;

@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.core;
+package com.has.echostream.backend.services.core;
 
-import com.has.core_backend.echostream.models.user.UserRole;
-import com.has.core_backend.echostream.repos.core.RoleRepository;
+import com.has.echostream.backend.models.user.UserRole;
+import com.has.echostream.backend.repos.core.RoleRepository;
 import org.springframework.stereotype.Service;
 
 @Service

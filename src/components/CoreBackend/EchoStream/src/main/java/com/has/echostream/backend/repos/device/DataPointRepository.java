@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.repos.device;
+package com.has.echostream.backend.repos.device;
 
-import com.has.core_backend.echostream.models.device.DataPoint;
+import com.has.echostream.backend.models.device.DataPoint;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

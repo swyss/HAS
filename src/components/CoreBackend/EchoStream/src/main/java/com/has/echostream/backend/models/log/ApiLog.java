@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream.models.log;
+package com.has.echostream.backend.models.log;
 
 import jakarta.persistence.*;
 import lombok.Getter;

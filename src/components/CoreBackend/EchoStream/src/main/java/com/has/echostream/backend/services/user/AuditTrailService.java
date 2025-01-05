@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.services.user;
+package com.has.echostream.backend.services.user;
 
-import com.has.core_backend.echostream.models.user.AuditTrail;
-import com.has.core_backend.echostream.repos.user.AuditTrailRepository;
+import com.has.echostream.backend.models.user.AuditTrail;
+import com.has.echostream.backend.repos.user.AuditTrailRepository;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

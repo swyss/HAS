@@ -1,4 +1,4 @@
-package com.has.backend.adminhub;
+package com.has.adminhub.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

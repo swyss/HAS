@@ -1,4 +1,4 @@
-package com.has.backend.adminhub;
+package com.has.adminhub.backend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

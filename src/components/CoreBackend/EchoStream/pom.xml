@@ -8,9 +8,9 @@
         <version>3.4.1</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.has.backend</groupId>
+    <groupId>com.has.echostream.backend</groupId>
     <artifactId>EchoStream</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.1.0-beta</version>
     <name>EchoStream</name>
     <description>EchoStream</description>
     <url/>
@@ -56,6 +56,12 @@
             <optional>true</optional>
         </dependency>
         <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>6.4.2</version>
+        </dependency>
+
+        <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
@@ -96,6 +102,10 @@
             <artifactId>mockito-core</artifactId>
             <version>5.14.2</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
 
     </dependencies>

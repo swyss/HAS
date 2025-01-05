@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.repos.log;
+package com.has.echostream.backend.repos.log;
 
-import com.has.core_backend.echostream.models.log.SystemLog;
+import com.has.echostream.backend.models.log.SystemLog;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;

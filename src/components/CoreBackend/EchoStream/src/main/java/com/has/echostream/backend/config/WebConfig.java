@@ -1,6 +1,6 @@
-package com.has.core_backend.echostream.config;
+package com.has.echostream.backend.config;
 
-import com.has.core_backend.echostream.helpers.interceptor.ApiLoggingInterceptor;
+import com.has.echostream.backend.utils.consolewriter.ApiLoggingInterceptor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;

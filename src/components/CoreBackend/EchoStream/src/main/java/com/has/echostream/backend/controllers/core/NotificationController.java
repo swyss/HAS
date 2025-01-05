@@ -1,7 +1,7 @@
-package com.has.core_backend.echostream.controllers.core;
+package com.has.echostream.backend.controllers.core;
 
-import com.has.core_backend.echostream.models.core.HAS_Notification;
-import com.has.core_backend.echostream.services.core.NotificationService;
+import com.has.echostream.backend.models.core.HAS_Notification;
+import com.has.echostream.backend.services.core.NotificationService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 

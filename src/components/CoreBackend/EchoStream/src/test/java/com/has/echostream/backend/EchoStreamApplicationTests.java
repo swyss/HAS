@@ -1,4 +1,4 @@
-package com.has.core_backend.echostream;
+package com.has.echostream.backend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
