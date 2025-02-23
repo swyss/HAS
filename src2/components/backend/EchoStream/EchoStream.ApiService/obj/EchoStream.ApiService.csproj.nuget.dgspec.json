@@ -1,0 +1,172 @@
+{
+  "format": 1,
+  "restore": {
+    "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ApiService\\EchoStream.ApiService.csproj": {}
+  },
+  "projects": {
+    "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ApiService\\EchoStream.ApiService.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ApiService\\EchoStream.ApiService.csproj",
+        "projectName": "EchoStream.ApiService",
+        "projectPath": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ApiService\\EchoStream.ApiService.csproj",
+        "packagesPath": "C:\\Users\\uller\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ApiService\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\uller\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ServiceDefaults\\EchoStream.ServiceDefaults.csproj": {
+                "projectPath": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ServiceDefaults\\EchoStream.ServiceDefaults.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\uller\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ServiceDefaults\\EchoStream.ServiceDefaults.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ServiceDefaults\\EchoStream.ServiceDefaults.csproj",
+        "projectName": "EchoStream.ServiceDefaults",
+        "projectPath": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ServiceDefaults\\EchoStream.ServiceDefaults.csproj",
+        "packagesPath": "C:\\Users\\uller\\.nuget\\packages\\",
+        "outputPath": "D:\\repos\\projects\\HAS\\src2\\components\\backend\\EchoStream\\EchoStream.ServiceDefaults\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\uller\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "9.0.200"
+      },
+      "frameworks": {
+        "net9.0": {
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.Extensions.Http.Resilience": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.ServiceDiscovery": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "OpenTelemetry.Exporter.OpenTelemetryProtocol": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "OpenTelemetry.Extensions.Hosting": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "OpenTelemetry.Instrumentation.AspNetCore": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Http": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            },
+            "OpenTelemetry.Instrumentation.Runtime": {
+              "target": "Package",
+              "version": "[1.9.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Users\\uller\\.dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
