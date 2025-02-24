@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EchoStream.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70875aa2ebbda398cfb750d6e448fdccfdbaef03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a88dfa61c4c2cdfcb4773eba66a730a2fee7028b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EchoStream.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EchoStream.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

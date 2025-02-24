@@ -10,7 +10,7 @@
 using System;
 using System.Reflection;
 
-[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("2b13efaa-714f-490c-9b17-a6c275042b53")]
+[assembly: Microsoft.Extensions.Configuration.UserSecrets.UserSecretsIdAttribute("8f9e4de2-da62-4a52-9e95-9927a2d1996a")]
 [assembly: System.Reflection.AssemblyMetadata("dcpclipath", ("C:\\Users\\uller\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\9.0.0\\tools\\d" +
     "cp.exe"))]
 [assembly: System.Reflection.AssemblyMetadata("dcpextensionpaths", ("C:\\Users\\uller\\.nuget\\packages\\aspire.hosting.orchestration.win-x64\\9.0.0\\tools\\e" +
@@ -24,7 +24,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EchoStream.AppHost")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+70875aa2ebbda398cfb750d6e448fdccfdbaef03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a88dfa61c4c2cdfcb4773eba66a730a2fee7028b")]
 [assembly: System.Reflection.AssemblyProductAttribute("EchoStream.AppHost")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EchoStream.AppHost")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
